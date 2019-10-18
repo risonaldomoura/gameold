@@ -9,6 +9,7 @@ interface HomeInteractor {
         fun resetActivity()
         fun messageWin(message: String)
         fun onDestroy()
+        fun dialogMessage(message: String)
 
     }
 

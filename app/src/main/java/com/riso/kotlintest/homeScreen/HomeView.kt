@@ -2,6 +2,7 @@ package com.riso.kotlintest.homeScreen
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.widget.Button
 import androidx.recyclerview.widget.StaggeredGridLayoutManager
 import com.riso.kotlintest.R
 import com.riso.kotlintest.base.CustomApplication
@@ -30,6 +31,10 @@ class HomeView : AppCompatActivity(), HomeInteractor.View{
     override fun resetActivity() {
         finish()
         Utils.startActivity(context, HomeView::class.java)
+    }
+
+    override fun dialogMessage(message: String) {
+        Utils.alertDialog(context, message)
     }
 
     fun initControl(){

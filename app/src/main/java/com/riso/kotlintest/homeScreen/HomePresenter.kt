@@ -52,11 +52,13 @@ class HomePresenter (private var view: HomeInteractor.View?): HomeInteractor.Pre
 
     private fun verifyWin(result: Boolean, gamer: Int, cont: Int){
         if(result){
-            view?.messageWin("Gamer $gamer is win!")
+            //view?.messageWin("Gamer $gamer is win!")
+            view?.dialogMessage("Gamer $gamer is win!")
             Handler().postDelayed({view?.resetActivity()}, 1000)
         }
         else if(!result && cont==9){
-            view?.messageWin("Game old")
+            //view?.messageWin("Game old")
+            view?.dialogMessage("Game old")
             Handler().postDelayed({view?.resetActivity()}, 1000)
         }
     }
